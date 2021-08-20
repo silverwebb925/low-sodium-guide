@@ -17,6 +17,7 @@ collections:
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'carosel'
+    extension: 'yml'
     label: 'Featured'
     folder: 'data/carousel'
     create: true
