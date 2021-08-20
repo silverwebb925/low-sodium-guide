@@ -28,4 +28,4 @@ collections:
       - { label: 'Weight', name: 'weight', widget: 'string' }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Image', name: 'image', widget: 'image', media_folder: "/static/img/carousel/" }
+      - { label: 'Image', name: 'image', widget: 'image', media_folder: "carousel" }
