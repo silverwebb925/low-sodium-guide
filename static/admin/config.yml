@@ -8,19 +8,18 @@ collections:
     name: "settings"
     files:
       - label: "Categories Page"
-        name: "about"
-        file: "site/content/about.yml"
+        name: "categories"
+        file: "site/content/categories.yml"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Intro, name: intro, widget: markdown}
+          - label: 'Category'
+            name: 'category'
+            widget: 'string'
           - label: 'Tags'
             name: 'tags'
             widget: 'list'
             fields:
               - {label: 'Name', name: 'name', widget: 'string'}
-              - {label: 'Position', name: 'position, widget: string'}
-          - { label: 'Body', name: 'body', widget: 'markdown' }
-
+              - {label: 'weight', name: 'weight', widget: 'string'}
 
   - name: 'blog'
     label: 'Blog'
