@@ -4,6 +4,24 @@ backend:
 media_folder: static/img
 public_folder: /img
 collections:
+  - label: "Settings"
+    name: "settings"
+    files:
+      - label: "Categories Page"
+        name: "about"
+        file: "site/content/about.yml"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Intro, name: intro, widget: markdown}
+          - label: 'Tags'
+            name: 'tags'
+            widget: 'list'
+            fields:
+              - {label: 'Name', name: 'name', widget: 'string'}
+              - {label: 'Position', name: 'position, widget: string'}
+              - {label: Photo, name: photo, widget: image}
+
+
   - name: 'blog'
     label: 'Blog'
     folder: 'content/blog'
@@ -16,6 +34,16 @@ collections:
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+      - name: 'tags'
+        label: 'Tags'
+        widget: 'relation'
+        collection: 'settings'
+        file: 'tags'
+        search_fields: ['tags.*.name']
+        display_fields: ['tags.*.name']
+        value_field: 'tags.*.name'
+
+
   - name: 'carosel'
     extension: 'yaml'
     label: 'Featured'
@@ -28,4 +56,4 @@ collections:
       - { label: 'Weight', name: 'weight', widget: 'string' }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Image', name: 'image', widget: 'image', media_folder: "carousel" }
+      - { label: 'Image', name: 'image', widget: 'image', media_folder: 'carousel' }
