@@ -4,23 +4,19 @@ backend:
 media_folder: static/img
 public_folder: /img
 collections:
-  - label: "Settings"
-    name: "settings"
+  - name: "settings"
+    label: "Settings"
     files:
-      - label: "Categories Page"
-        name: "categories"
+      - label: "Tags"
+        name: "tags"
         file: "site/content/categories.yml"
         fields:
-          - label: 'Category'
-            name: 'category'
-            widget: 'string'
           - label: 'Tags'
             name: 'tags'
             widget: 'list'
             fields:
               - {label: 'Name', name: 'name', widget: 'string'}
               - {label: 'weight', name: 'weight', widget: 'string'}
-
   - name: 'blog'
     label: 'Blog'
     folder: 'content/blog'
@@ -39,8 +35,8 @@ collections:
         collection: 'settings'
         file: 'tags'
         search_fields: ['tags.*.name']
-        display_fields: ['tags.*.name']
-        value_field: 'tags.*.name'
+        display_fields: ['tags.*.name', ]
+        value_field: 'tags.*.weight'
 
 
   - name: 'carosel'
