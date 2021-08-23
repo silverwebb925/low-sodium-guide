@@ -8,3 +8,5 @@ tags:
     weight: "3"
   - name: Snacks
     weight: "4"
+  - name: Zero Snacks
+    weight: "5"
