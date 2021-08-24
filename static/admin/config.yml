@@ -9,7 +9,7 @@ collections:
     files:
       - label: "Tags"
         name: "tags"
-        file: "site/content/settings/tags.yml"
+        file: "content/settings/tags.yml"
         fields:
           - label: 'Tags'
             name: 'tags'
