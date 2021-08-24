@@ -27,15 +27,19 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
-      - name: 'tags'
-        label: 'Tags'
-        widget: 'relation'
-        collection: 'settings'
-        file: 'tags'
-        multiple: true
-        search_fields: ['tags.*.name']
-        display_fields: ['tags.*.name']
-        value_field: 'tags.*.name'
+      - label: 'Tags'
+        name: 'tags'
+        widget: 'list'
+        fields:
+          - {label: 'Weight', name: 'weight', widget: 'number'}
+          - name: 'tags'
+            label: 'Tags'
+            widget: 'relation'
+            collection: 'settings'
+            file: 'tags'
+            search_fields: ['tags.*.name']
+            display_fields: ['tags.*.name']
+            value_field: 'tags.*.name'
   - name: 'recipes'
     label: 'Recipes'
     folder: 'content/recipes'
