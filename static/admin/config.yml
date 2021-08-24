@@ -28,14 +28,14 @@ collections:
                     multiple: true
                     file: 'tags.yml'
                     search_fields: ['tags.*.name']
-                    display_fields: ['tags.*.name', ]
+                    display_fields: ['tags.*.name']
                     value_field: 'tags.*.name'
       - label: "Tags"
         name: "tags"
         file: "content/settings/tags.yml"
         fields:
           - label: 'Tags'
-            name: 'tags.'
+            name: 'tags'
             widget: 'list'
             fields:
               - {label: 'Name', name: 'name', widget: 'string'}
