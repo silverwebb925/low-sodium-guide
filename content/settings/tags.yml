@@ -2,3 +2,9 @@ tags:
   - name: Breakfast
   - name: Lunch
   - name: Dinner
+tags.:
+  - name: Breakfast
+  - name: Lunch
+  - name: Dinner
+  - name: Snacks
+  - name: Zero Snacks
