@@ -16,26 +16,26 @@ collections:
             widget: 'list'
             fields:
               - {label: 'Name', name: 'name', widget: 'string'}
-              - label: 'Tags'
-                name: 'tags'
+              - label: 'Category Tags'
+                name: 'category_tags'
                 widget: 'list'
                 fields:
                   - {label: 'weight', name: 'weight', widget: 'string'}
-                  - name: 'tags'
-                    label: 'Tags'
+                  - name: 'name'
+                    label: 'Name'
                     widget: 'relation'
                     collection: 'settings'
                     multiple: 'true'
-                    file: 'tags'
+                    file: 'tags.yml'
                     search_fields: ['tags.*.name']
                     display_fields: ['tags.*.name', ]
-                    value_field: 'tags.*.weight'
+                    value_field: 'tags.*.name'
       - label: "Tags"
         name: "tags"
         file: "content/settings/tags.yml"
         fields:
           - label: 'Tags'
-            name: 'tags'
+            name: 'tags.'
             widget: 'list'
             fields:
               - {label: 'Name', name: 'name', widget: 'string'}
@@ -56,10 +56,10 @@ collections:
         widget: 'relation'
         collection: 'settings'
         multiple: 'true'
-        file: 'tags'
+        file: 'tags.yml'
         search_fields: ['tags.*.name']
         display_fields: ['tags.*.name', ]
-        value_field: 'tags.*.weight'
+        value_field: 'tags.*.name'
 
 
   - name: 'carosel'
