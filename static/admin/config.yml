@@ -32,8 +32,10 @@ collections:
         widget: 'relation'
         collection: 'settings'
         file: 'tags'
-        search_fields: 'tags.*.name'
-        display_fields: 'tags.*.name'
+        multiple: true
+        search_fields: ['tags.*.name']
+        display_fields: ['tags.*.name']
+        value_fields: 'tags.*.name'
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'carousel'
     extension: 'yaml'
