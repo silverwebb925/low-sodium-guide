@@ -35,7 +35,7 @@ collections:
         multiple: true
         search_fields: ['tags.*.name']
         display_fields: ['tags.*.name']
-        value_fields: 'tags.*.name'
+        value_field: 'tags.*.name'
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'carousel'
     extension: 'yaml'
