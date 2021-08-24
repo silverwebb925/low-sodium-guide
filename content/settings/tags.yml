@@ -1,7 +1,4 @@
 tags:
   - name: Breakfast
-    weight: "1"
   - name: Lunch
-    weight: "2"
   - name: Dinner
-    weight: "3"

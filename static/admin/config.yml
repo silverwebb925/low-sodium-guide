@@ -7,6 +7,29 @@ collections:
   - name: "settings"
     label: "Settings"
     files:
+      - label: "Categories"
+        name: "categories"
+        file: "content/settings/categories.yml"
+        fields:
+          - label: 'Categories'
+            name: 'categories'
+            widget: 'list'
+            fields:
+              - {label: 'Name', name: 'name', widget: 'string'}
+              - label: 'Tags'
+                name: 'tags'
+                widget: 'list'
+                fields:
+                  - {label: 'weight', name: 'weight', widget: 'string'}
+                  - name: 'tags'
+                    label: 'Tags'
+                    widget: 'relation'
+                    collection: 'settings'
+                    multiple: 'true'
+                    file: 'tags'
+                    search_fields: ['tags.*.name']
+                    display_fields: ['tags.*.name', ]
+                    value_field: 'tags.*.weight'
       - label: "Tags"
         name: "tags"
         file: "content/settings/tags.yml"
@@ -16,7 +39,6 @@ collections:
             widget: 'list'
             fields:
               - {label: 'Name', name: 'name', widget: 'string'}
-              - {label: 'weight', name: 'weight', widget: 'string'}
   - name: 'blog'
     label: 'Blog'
     folder: 'content/blog'
@@ -33,6 +55,7 @@ collections:
         label: 'Tags'
         widget: 'relation'
         collection: 'settings'
+        multiple: 'true'
         file: 'tags'
         search_fields: ['tags.*.name']
         display_fields: ['tags.*.name', ]
