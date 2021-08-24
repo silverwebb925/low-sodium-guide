@@ -21,19 +21,19 @@ collections:
     folder: "content/sections"
     fields:
       - {label: 'Name', name: 'name', widget: 'string'}
-        - label: 'Section Tags'
-          name: 'section_tags'
-          widget: 'list'
-          fields:
-            - {label: 'weight', name: 'weight', widget: 'string'}
-            - name: 'name'
-              label: 'Name'
-              widget: 'relation'
-              collection: 'settings'
-              file: 'tags.yml'
-              search_fields: ['tags.*.name']
-              display_fields: ['tags.*.name']
-              value_field: 'tags.*.name'
+      - label: 'Section Tags'
+        name: 'section_tags'
+        widget: 'list'
+        fields:
+          - {label: 'weight', name: 'weight', widget: 'string'}
+          - name: 'name'
+            label: 'Name'
+            widget: 'relation'
+            collection: 'settings'
+            file: 'tags.yml'
+            search_fields: ['tags.*.name']
+            display_fields: ['tags.*.name']
+            value_field: 'tags.*.name'
   - name: 'recipes'
     label: 'Recipes'
     folder: 'content/recipes'
