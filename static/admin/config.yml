@@ -39,7 +39,7 @@ collections:
             file: 'tags.yml'
             search_fields: ['tags.*.name']
             display_fields: ['tags.*.name']
-            value_field: 'tags.*.name'
+            value_field: ['tags.*.name']
   - name: 'recipes'
     label: 'Recipes'
     folder: 'content/recipes'
@@ -59,8 +59,8 @@ collections:
         multiple: true
         file: 'tags.yml'
         search_fields: ['tags.*.name']
-        display_fields: ['tags.*.name', ]
-        value_field: 'tags.*.name'
+        display_fields: ['tags.*.name']
+        value_field: ['tags.*.name']
 
 
   - name: 'carosel'
