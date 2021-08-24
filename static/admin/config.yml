@@ -7,29 +7,6 @@ collections:
   - name: "settings"
     label: "Settings"
     files:
-      - label: "Categories"
-        name: "categories"
-        file: "content/settings/categories.yml"
-        fields:
-          - label: 'Categories'
-            name: 'categories'
-            widget: 'list'
-            fields:
-              - {label: 'Name', name: 'name', widget: 'string'}
-              - label: 'Category Tags'
-                name: 'category_tags'
-                widget: 'list'
-                fields:
-                  - {label: 'weight', name: 'weight', widget: 'string'}
-                  - name: 'name'
-                    label: 'Name'
-                    widget: 'relation'
-                    collection: 'settings'
-                    multiple: true
-                    file: 'tags.yml'
-                    search_fields: ['tags.*.name']
-                    display_fields: ['tags.*.name']
-                    value_field: 'tags.*.name'
       - label: "Tags"
         name: "tags"
         file: "content/settings/tags.yml"
@@ -39,9 +16,27 @@ collections:
             widget: 'list'
             fields:
               - {label: 'Name', name: 'name', widget: 'string'}
-  - name: 'blog'
-    label: 'Blog'
-    folder: 'content/blog'
+  - label: "Sections"
+    name: "sections"
+    folder: "content/sections"
+    fields:
+      - {label: 'Section', name: 'section', widget: 'string'}
+        - label: 'Section Tags'
+          name: 'section_tags'
+          widget: 'list'
+          fields:
+            - {label: 'weight', name: 'weight', widget: 'string'}
+            - name: 'name'
+              label: 'Name'
+              widget: 'relation'
+              collection: 'settings'
+              file: 'tags.yml'
+              search_fields: ['tags.*.name']
+              display_fields: ['tags.*.name']
+              value_field: 'tags.*.name'
+  - name: 'recipes'
+    label: 'Recipes'
+    folder: 'content/recipes'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     editor:
