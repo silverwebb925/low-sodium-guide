@@ -67,9 +67,9 @@ paginate = 10
 
 
 [[menu.main]]
-    name       = "Recipes"
-    identifier = "menu.recipes"
-    url        = "/recipes/"
+    name       = "blog"
+    identifier = "menu.blog"
+    url        = "/blog/"
     weight     = 2
 
 [[menu.main]]
@@ -87,10 +87,10 @@ paginate = 10
 
 
 [params]
-    viewMorePostLink = "/recipes/"
+    viewMorePostLink = "/blog/"
     author = "DevCows"
     defaultKeywords = ["devows", "hugo", "go"]
-    mainSections = ["recipes"]
+    mainSections = ["blog"]
     defaultDescription = "Site template made by devcows using hugo"
 
     # Social media
@@ -164,7 +164,7 @@ paginate = 10
       """
 
 [permalinks]
-    recipes = "/recipes/:year/:month/:day/:filename/"
+    blog = "/blog/:year/:month/:day/:filename/"
 
 # Enable or disable top bar with social icons
 
@@ -178,7 +178,7 @@ paginate = 10
 
 [params.recent_posts]
     enable = true
-    title = "From our recipes"
+    title = "From our blog"
     subtitle = "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo."
     hide_summary = false
 
