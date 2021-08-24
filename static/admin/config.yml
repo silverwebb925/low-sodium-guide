@@ -16,30 +16,6 @@ collections:
             widget: 'list'
             fields:
               - {label: 'Name', name: 'name', widget: 'string'}
-  - label: "Sections"
-    name: "sections"
-    folder: "content/sections"
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-    create: true
-    editor:
-      preview: false
-    fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - label: 'Section Tags'
-        name: 'section_tags'
-        widget: 'list'
-        fields:
-          - {label: 'weight', name: 'weight', widget: 'string'}
-          - name: 'name'
-            label: 'Name'
-            widget: 'relation'
-            collection: 'settings'
-            file: 'tags.yml'
-            search_fields: ['tags.*.name']
-            display_fields: ['tags.*.name']
-            value_field: 'tags.*.name'
   - name: 'recipes'
     label: 'Recipes'
     folder: 'content/recipes'
@@ -51,16 +27,16 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
       - name: 'tags'
         label: 'Tags'
         widget: 'relation'
         collection: 'settings'
-        multiple: true
         file: 'tags.yml'
         search_fields: ['tags.*.name']
         display_fields: ['tags.*.name']
         value_field: 'tags.*.name'
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+
 
 
   - name: 'carosel'
