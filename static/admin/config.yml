@@ -16,7 +16,6 @@ collections:
             widget: 'list'
             fields:
               - {label: 'Name', name: 'name', widget: 'string'}
-              - {label: 'Name2', name: 'name2', widget: 'string'}
   - name: 'recipes'
     label: 'Recipes'
     folder: 'content/recipes'
@@ -32,14 +31,11 @@ collections:
         label: 'Tags'
         widget: 'relation'
         collection: 'settings'
-        file: 'tags.yml'
+        file: 'content/settings/tags.yml'
         search_fields: ['tags.*.name']
         display_fields: ['tags.*.name']
-        value_field: 'tags.*.name2'
+        value_field: 'tags.*.name'
       - { label: 'Body', name: 'body', widget: 'markdown' }
-
-
-
   - name: 'carosel'
     extension: 'yaml'
     label: 'Featured'
