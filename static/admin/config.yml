@@ -31,10 +31,9 @@ collections:
         label: 'Tags'
         widget: 'relation'
         collection: 'settings'
-        file: 'content/settings/tags.yml'
+        file: 'tags'
         search_fields: 'tags.*.name'
         display_fields: 'tags.*.name'
-        value_field: 'tags.*.name'
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'carousel'
     extension: 'yaml'
