@@ -34,8 +34,8 @@ paginate = 10
     weight     = 3
 
 [[menu.main]]
-    name       = "Meal"
-    identifier = "section.shortcodes"
+    name       = "Meal Types"
+    identifier = "section.meals"
     url        = ""
     weight     = 1
     parent     = "menu.features"
@@ -45,25 +45,25 @@ paginate = 10
     name       = "Breakfast"
     url        = ""
     weight     = 1
-    parent     = "section.shortcodes"
+    parent     = "section.meals"
 
 [[menu.main]]
     name       = "Lunch"
     url        = ""
     weight     = 2
-    parent     = "section.shortcodes"
+    parent     = "section.meals"
 
 [[menu.main]]
     name       = "Dinner"
     url        = ""
     weight     = 3
-    parent     = "section.shortcodes"
+    parent     = "section.meals"
 
 [[menu.main]]
     name       = "Snacks"
     url        = ""
     weight     = 4
-    parent     = "section.shortcodes"
+    parent     = "section.meals"
 
 
 [[menu.main]]
