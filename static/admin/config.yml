@@ -20,7 +20,7 @@ collections:
     name: "sections"
     folder: "content/sections"
     fields:
-      - {label: 'Section', name: 'section', widget: 'string'}
+      - {label: 'Name', name: 'name', widget: 'string'}
         - label: 'Section Tags'
           name: 'section_tags'
           widget: 'list'
