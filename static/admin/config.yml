@@ -25,7 +25,7 @@ collections:
                     label: 'Name'
                     widget: 'relation'
                     collection: 'settings'
-                    multiple: 'true'
+                    multiple: true
                     file: 'tags.yml'
                     search_fields: ['tags.*.name']
                     display_fields: ['tags.*.name', ]
@@ -55,7 +55,7 @@ collections:
         label: 'Tags'
         widget: 'relation'
         collection: 'settings'
-        multiple: 'true'
+        multiple: true
         file: 'tags.yml'
         search_fields: ['tags.*.name']
         display_fields: ['tags.*.name', ]
