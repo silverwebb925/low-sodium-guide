@@ -16,9 +16,9 @@ collections:
             widget: 'list'
             fields:
               - {label: 'Name', name: 'name', widget: 'string'}
-  - name: 'sections'
-    label: 'Sections'
-    folder: 'content/settings'
+  - name: 'categories'
+    label: 'Recipe Categories'
+    folder: 'content/recipe_categories'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     editor:
